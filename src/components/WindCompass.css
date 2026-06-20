@@ -1,0 +1,153 @@
+.wind-compass-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wind-compass-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.8rem;
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+}
+
+.wind-compass-circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wind-compass-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.wind-arrow-tip {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 15px solid #ffd700;
+  position: absolute;
+  top: -15px;
+  left: -8px;
+}
+
+.wind-arrow-line {
+  width: 3px;
+  height: 50px;
+  background: #ffd700;
+  position: absolute;
+  bottom: 0;
+  left: -1.5px;
+}
+
+.wind-compass-labels span {
+  position: absolute;
+  font-size: 0.7rem;
+  opacity: 0.6;
+  font-weight: 500;
+  color: white;
+}
+
+.wind-label-n {
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wind-label-e {
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.wind-label-s {
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wind-label-w {
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.wind-compass-center {
+  text-align: center;
+}
+
+.wind-speed-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  display: block;
+  line-height: 1;
+}
+
+.wind-speed-unit {
+  font-size: 0.6rem;
+  opacity: 0.5;
+  display: block;
+  margin-top: 0.1rem;
+}
+
+.wind-compass-info {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.wind-direction-short {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffd700;
+}
+
+.wind-direction-full {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 480px) {
+  .wind-compass-circle {
+    width: 120px;
+    height: 120px;
+  }
+  .wind-speed-value {
+    font-size: 1.4rem;
+  }
+  .wind-arrow-line {
+    height: 40px;
+  }
+  .wind-direction-short {
+    font-size: 1.2rem;
+  }
+  .wind-direction-full {
+    font-size: 0.7rem;
+  }
+  .wind-compass-title {
+    font-size: 0.8rem;
+  }
+}

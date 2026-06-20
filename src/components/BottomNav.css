@@ -1,0 +1,93 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 0.5rem 0;
+  z-index: 100;
+  height: 65px;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  padding: 0.3rem 0.8rem;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.bottom-nav-item:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bottom-nav-item.active {
+  color: white;
+}
+
+.bottom-nav-item.active::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background: #ffd700;
+  border-radius: 4px;
+}
+
+.bottom-nav-icon {
+  font-size: 1.4rem;
+  margin-bottom: 0.1rem;
+}
+
+.bottom-nav-label {
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.weather-dashboard.dark .bottom-nav {
+  background: rgba(0, 0, 0, 0.45);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.weather-dashboard.dark .bottom-nav-item {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.weather-dashboard.dark .bottom-nav-item:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.weather-dashboard.dark .bottom-nav-item.active {
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .bottom-nav {
+    height: 55px;
+    padding: 0.3rem 0;
+  }
+  .bottom-nav-icon {
+    font-size: 1.2rem;
+  }
+  .bottom-nav-label {
+    font-size: 0.5rem;
+  }
+  .bottom-nav-item {
+    padding: 0.2rem 0.4rem;
+  }
+}

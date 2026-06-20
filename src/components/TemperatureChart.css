@@ -1,0 +1,204 @@
+.temp-chart-container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.temp-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.temp-chart-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+}
+
+.temp-chart-stats {
+  display: flex;
+  gap: 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.stat-high {
+  color: #ff6b6b;
+}
+
+.stat-low {
+  color: #4facfe;
+}
+
+.stat-avg {
+  color: #ffd700;
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 280px;
+}
+
+.custom-tooltip {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  min-width: 150px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.tooltip-day {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 0.2rem 0;
+}
+
+.tooltip-date {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 0.4rem 0;
+}
+
+.tooltip-temps {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.tooltip-high {
+  color: #ff6b6b;
+}
+
+.tooltip-low {
+  color: #4facfe;
+}
+
+.tooltip-avg {
+  color: #ffd700;
+}
+
+.tooltip-details {
+  display: flex;
+  gap: 0.8rem;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.3rem;
+  padding-top: 0.3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.custom-legend {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.3rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.legend-color {
+  width: 12px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.temp-chart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chart-legend-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.high-dot {
+  background: #ff6b6b;
+}
+
+.low-dot {
+  background: #4facfe;
+}
+
+.avg-dot {
+  background: #ffd700;
+}
+
+.chart-range {
+  font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  .temp-chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .temp-chart-stats {
+    font-size: 0.65rem;
+  }
+  .chart-wrapper {
+    height: 220px;
+  }
+  .custom-tooltip {
+    min-width: 120px;
+    padding: 0.6rem 0.8rem;
+  }
+  .tooltip-temps {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .temp-chart-container {
+    padding: 1rem;
+  }
+  .chart-wrapper {
+    height: 180px;
+  }
+  .temp-chart-stats {
+    font-size: 0.55rem;
+    gap: 0.4rem;
+  }
+  .temp-chart-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .custom-legend {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}

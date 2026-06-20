@@ -1,0 +1,61 @@
+.favorites-container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.favorites-header h3 {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.favorites-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 0.2rem 0.2rem 0.2rem 0.8rem;
+}
+
+.favorite-city-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: 'Poppins', sans-serif;
+  padding: 0.3rem 0.4rem;
+  transition: all 0.3s ease;
+}
+
+.favorite-city-btn:hover {
+  transform: scale(1.05);
+}
+
+.favorite-remove-btn {
+  background: rgba(255, 0, 0, 0.15);
+  border: none;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.7rem;
+  transition: all 0.3s ease;
+}
+
+.favorite-remove-btn:hover {
+  background: rgba(255, 0, 0, 0.3);
+  transform: scale(1.1);
+}
